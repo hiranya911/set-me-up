@@ -1,4 +1,4 @@
 # set-me-up
-Environment and other productivity tools setup.
+Set up environment and other productivity tools.
 
-* pmcli - Project Management Command-Line Interface
+* pmcli: Project Management Command-Line Interface
