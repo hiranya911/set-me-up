@@ -1,2 +1,2 @@
 #!/bin/sh
-cp pmcli.py /usr/bin/pmcli
+cp src/pmcli.py /usr/bin/pmcli
