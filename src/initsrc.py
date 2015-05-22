@@ -28,7 +28,9 @@ class JavaProject:
         self.version = version
         self.dependencies = [
             JavaDependency('commons-io', 'commons-io', '2.0'),
-            JavaDependency('junit', 'junit', '3.8', 'test')
+            JavaDependency('commons-logging', 'commons-logging', '1.1.1'),
+            JavaDependency('log4j', 'log4j', '1.2.12'),
+            JavaDependency('junit', 'junit', '3.8', 'test'),
         ]
 
     def write(self):
@@ -91,14 +93,17 @@ def init_java_src():
     version = get_input('Version', '1.0.0')
 
     if os.path.exists(name):
+        print 'Cleaning up the existing artifacts...'
         shutil.rmtree(name)
 
+    print 'Creating project directory structure...'
     p = JavaProject(name, groupId, artifactId, version)        
     os.makedirs(name)
     os.makedirs(os.path.join(name, 'src', 'main', 'java'))
     os.makedirs(os.path.join(name, 'src', 'main', 'resources'))
     os.makedirs(os.path.join(name, 'src', 'test', 'java'))
 
+    print 'Writing the pom.xml...'
     f = open(os.path.join(name, 'pom.xml'), 'w')
     f.write(p.write())
     f.close()
