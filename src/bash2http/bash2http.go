@@ -20,12 +20,12 @@ func main() {
 	port := flag.Int("p", 8080, "HTTP port to listen on")
 	flag.Parse()
 
-	l := log.New(os.Stdout, "", log.Ldate|log.Ltime)
-
 	if *binary == "" {
-		l.Fatal("Path to binary not specified.")
+		fmt.Println("Path to binary not specified.")
+		return
 	}
 
+	l := log.New(os.Stdout, "", log.Ldate|log.Ltime)
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		var argString string
 		if r.Body != nil {
