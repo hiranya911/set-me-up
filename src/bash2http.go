@@ -7,7 +7,10 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io/ioutil"
+	"log"
 	"net/http"
+	"os"
 	"os/exec"
 	"strings"
 )
@@ -17,14 +20,29 @@ func main() {
 	port := flag.Int("p", 8080, "HTTP port to listen on")
 	flag.Parse()
 
+	l := log.New(os.Stdout, "", log.Ldate|log.Ltime)
+
 	if *binary == "" {
-		fmt.Println("Path to binary not specified.")
-		return
+		l.Fatal("Path to binary not specified.")
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		var argString string
+		if r.Body != nil {
+			data, err := ioutil.ReadAll(r.Body)
+			if err != nil {
+				l.Print(err)
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+				return
+			}
+			argString = string(data)
+		}
+
 		fields := strings.Fields(*binary)
-		output, err := exec.Command(fields[0], fields[1:]...).Output()
+		args := append(fields[1:], strings.Fields(argString)...)
+		l.Printf("Command: [%s %s]", fields[0], strings.Join(args, " "))
+
+		output, err := exec.Command(fields[0], args...).Output()
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
@@ -33,7 +51,7 @@ func main() {
 		w.Write(output)
 	})
 
-	fmt.Printf("Listening on port %d...\n", *port)
-	fmt.Printf("Exposed binary: %s\n", *binary)
+	l.Printf("Listening on port %d...", *port)
+	l.Printf("Exposed binary: %s", *binary)
 	http.ListenAndServe(fmt.Sprintf("127.0.0.1:%d", *port), nil)
 }
