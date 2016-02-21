@@ -42,8 +42,9 @@ func main() {
 		args := append(fields[1:], strings.Fields(argString)...)
 		l.Printf("Command: [%s %s]", fields[0], strings.Join(args, " "))
 
-		output, err := exec.Command(fields[0], args...).Output()
+		output, err := exec.Command(fields[0], args...).CombinedOutput()
 		if err != nil {
+			l.Print(string(output), err)
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
