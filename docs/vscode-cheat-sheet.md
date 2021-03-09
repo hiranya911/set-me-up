@@ -21,19 +21,20 @@
 
 ## Selection
 
-|Command                  |Key binding                      |
-|-------------------------|---------------------------------|
-|Select explorer          |`CMD + 0`                        |
-|Select window by name    |`CTRL + TAB`                     |
-|Select window            |`CTRL + <NUM>`                   |
-|Select next word         |`SHFT + OPT + RIGHT`             |
-|Select prev word         |`SHFT + OPT + LEFT`              |
-|Select line              |`CMD + L`                        |
-|Select word              |`CMD + D`                        |
-|Select code block        |`CMD + CTRL + SHFT + LEFT/RIGHT` |
-|Select all occurences of |`SHFT + CMD + L`                 |
-|Select box               |`SHFT + OPT + CMD + U/D/L/R`     |
-|Unselect                 |`ESC`                            |
+|Command                            |Key binding                      |
+|-----------------------------------|---------------------------------|
+|Select explorer                    |`CMD + 0`                        |
+|Select window by name              |`CTRL + TAB`                     |
+|Select window                      |`CTRL + <NUM>`                   |
+|Select next word                   |`SHFT + OPT + RIGHT`             |
+|Select prev word                   |`SHFT + OPT + LEFT`              |
+|Select line                        |`CMD + L`                        |
+|Select word                        |`CMD + D`                        |
+|Select code block                  |`CMD + CTRL + SHFT + LEFT/RIGHT` |
+|Select all occurences of selection |`SHFT + CMD + L`                 |
+|Select all occurences of word      |`CMD + F2`                       |
+|Select box                         |`SHFT + OPT + CMD + U/D/L/R`     |
+|Unselect                           |`ESC`                            |
 
 ## Window management
 
@@ -68,3 +69,16 @@
 |Delete word right        |`FN + OPT + DELETE`    |
 |Delete line left         |`CMD + DELETE`         |
 |Delete line right        |`CTRL + K`             |
+
+## Search
+
+|Command              |Key binding       |
+|---------------------|------------------|
+|Find                 |`CMD + F`         |
+|Toggle regex mode    |`OPT + CMD + R`   |
+|Prev search          |`OPT + UP`        |
+|Next search          |`OPT + DOWN`      |
+|Prev match           |`SHFT + CMD + G`  |
+|Next match           |`CMD + G`         |
+|Select all matches   |`OPT + ENTER`     |
+|Select next match    |`CMD + D`         |
