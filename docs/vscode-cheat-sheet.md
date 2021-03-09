@@ -17,6 +17,7 @@
 |Go to last edit      |`CMD + U`         |
 |Go to definition     |`F12`             |
 |Go to implementation |`CMD + F12`       |
+|Go to references     |`SHFT + F12`      |
 
 ## Selection
 
@@ -61,4 +62,9 @@
 |Duplicate line           |`SHFT + OPT + UP/DOWN` |
 |Insert line down         |`CMD + ENTER`          |
 |Insert line up           |`CMD + SHFT + ENTER`   |
-
+|Delete char left         |`DELETE`               |
+|Delete char right        |`FN + DELETE`          |
+|Delete word left         |`OPT + DELETE`         |
+|Delete word right        |`FN + OPT + DELETE`    |
+|Delete line left         |`CMD + DELETE`         |
+|Delete line right        |`CTRL + K`             |
