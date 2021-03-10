@@ -82,3 +82,6 @@
 |Next match           |`CMD + G`         |
 |Select all matches   |`OPT + ENTER`     |
 |Select next match    |`CMD + D`         |
+|Replace              |`OPT + CMD + F`   |
+|Replace selected     |`ENTER`           |
+|Replace all          |`CMD + ENTER`     |
