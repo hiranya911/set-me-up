@@ -44,9 +44,13 @@
 |Toggle terminal    |``` CTRL + ` ```     |
 |Open settings      |`CMD + ,`            |
 |Close window       |`CMD + W`            |
+|Close all          |`CMD + K`, `W`       |
+|Close others       |`OPT + CMD + T`      |
 |Split window       |`CMD + \`            |
 |Open selected      |`CMD + DOWN`         |
 |Keyboard shortcuts |`CMD + K`, `CMD + S` |
+|Next window        |`CMD + OPT + RIGHT`  |
+|Prev window        |`CMD + OPT + LEFT`   |
 
 ## Editing
 
