@@ -14,6 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Add comment to referenced task
     steps:
-      - uses: shortwave/github-asana-integration@main
+      - uses: shortwave/github-asana-integration@hkj-diff
         with:
           asana-pat: ${{ secrets.ASANA_PAT }}
