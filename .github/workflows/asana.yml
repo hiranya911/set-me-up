@@ -1,0 +1,19 @@
+name: Asana Integration
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+  issue_comment:
+    types:
+      - created
+      - edited
+
+jobs:
+  add_comment:
+    runs-on: ubuntu-latest
+    name: Add comment to referenced task
+    steps:
+      - uses: shortwave/github-asana-integration@main
+        with:
+          asana-pat: ${{ secrets.ASANA_PAT }}
