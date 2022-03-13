@@ -2,22 +2,24 @@
 
 ## Navigation
 
-|Command              |Key binding       |
-|---------------------|------------------|
-|Next word            |`OPT + RIGHT`     |
-|Prev word            |`OPT + LEFT`      |
-|Start of line        |`CMD + RIGHT`     |
-|End of line          |`CMD + LEFT`      |
-|Start of file        |`CMD + UP`        |
-|End of file          |`CMD + DOWN`      |
-|Go to line number    |`CTRL + G`        |
-|Go to symbol         |`SHFT + CMD + O`  |
-|Go to declaration    |`CMD + T`         |
-|Go to bracket        |`SHFT + CMD + \`  |
-|Go to last edit      |`CMD + U`         |
-|Go to definition     |`F12`             |
-|Go to implementation |`CMD + F12`       |
-|Go to references     |`SHFT + F12`      |
+|Command              |Key binding          |
+|---------------------|---------------------|
+|Next word            |`OPT + RIGHT`        |
+|Prev word            |`OPT + LEFT`         |
+|Next camel           |`CTRL + OPT + RIGHT` |
+|Prev camel           |`CTRL + OPT + LEFT`  |
+|Start of line        |`CMD + RIGHT`        |
+|End of line          |`CMD + LEFT`         |
+|Start of file        |`CMD + UP`           |
+|End of file          |`CMD + DOWN`         |
+|Go to line number    |`CTRL + G`           |
+|Go to symbol         |`SHFT + CMD + O`     |
+|Go to declaration    |`CMD + T`            |
+|Go to bracket        |`SHFT + CMD + \`     |
+|Go to last edit      |`CMD + U`            |
+|Go to definition     |`F12`                |
+|Go to implementation |`CMD + F12`          |
+|Go to references     |`SHFT + F12`         |
 
 ## Selection
 
@@ -73,6 +75,8 @@
 |Delete word right        |`FN + OPT + DELETE`    |
 |Delete line left         |`CMD + DELETE`         |
 |Delete line right        |`CTRL + K`             |
+|Delete camel left        |`CTRL + OPT + DELETE`  |
+
 
 ## Search
 
