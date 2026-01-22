@@ -74,3 +74,9 @@ Aim for:
 ---
 
 *Happy testing! 🧪*
+
+---
+
+_Tests pass or fail,_  
+_Green lights guide the code forward,_  
+_Confidence builds strong._
